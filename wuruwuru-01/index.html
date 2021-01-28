@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Wuruwuru</title>
+		<meta name="title" content="T MINUS ?">
+		<meta name="description" content="Wuruwuru is a publishing experiment.">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://wuruwuru.com/">
+		<meta property="og:title" content="T MINUS ?">
+		<meta property="og:description" content="Wuruwuru is a publishing experiment.">
+		<meta property="og:image" content="https://wuruwuru.com/assets/images/thumbnail.png">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://wuruwuru.com/">
+		<meta property="twitter:title" content="T MINUS ?">
+		<meta property="twitter:description" content="Wuruwuru is a publishing experiment.">
+		<meta property="twitter:image" content="https://wuruwuru.com/assets/images/thumbnail.png">
+
+		<style>
+			@font-face {
+				font-family: 'Soehne';
+				font-weight: normal;
+				src: url('assets/fonts/soehne-web-buch.woff');
+			}
+			@font-face {
+				font-family: 'Soehne';
+				font-weight: normal;
+				font-style: italic;
+				src: url('assets/fonts/soehne-web-buch-kursiv.woff');
+			}
+			@font-face {
+				font-family: 'Soehne';
+				font-weight: bold;
+				src: url('assets/fonts/soehne-web-halbfett.woff');
+			}
+			@font-face {
+				font-family: 'Soehne';
+				font-weight: bold;
+				font-style: italic;
+				src: url('assets/fonts/soehne-web-halbfett-kursiv.woff');
+			}
+			@font-face {
+				font-family: 'Soehne Schmal';
+				font-weight: bold;
+				src: url('assets/fonts/soehne-schmal-web-dreiviertelfett.woff');
+			}
+			* {
+				box-sizing: border-box;
+			}
+			html, body {
+				overflow: hidden;
+			}
+			body {
+				margin: 0;
+				position: relative;
+				font-family: 'Soehne', sans-serif;
+				-webkit-font-smoothing: antialiased;
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+			.dots {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+			/* https://bansal.io/pattern-css#installation */
+			.checkered {
+				background-image: repeating-linear-gradient(45deg, #e5e5e5 25%, transparent 25%, transparent 75%, #e5e5e5 75%, #e5e5e5),repeating-linear-gradient(45deg, #e5e5e5 25%, transparent 25%, transparent 75%, #e5e5e5 75%, #e5e5e5);
+				background-position: 0 0,10px 10px;
+				background-size: calc(2 * 10px) calc(2 * 10px);
+			}
+			a {
+				color: black;
+				font-size: 1.6rem;
+				font-family: serif;
+				font-style: italic;
+			}
+			a:hover {
+				animation: link-flash .5s infinite;
+			}
+			@keyframes link-flash {
+				0%, 100% { 
+					text-decoration: none;
+				}
+				80% {
+					text-decoration: underline;
+				}
+			}
+			header {
+				position: absolute;
+				left: 0;
+				right: 0;
+				display: flex;
+				justify-content: space-between;
+				z-index: 2;
+			}
+			nav {
+				text-align: right;
+				padding: 20px;
+			}
+			nav a {
+				display: block;
+				margin-top: 5px;
+			}
+			@media screen and (max-width: 600px) {
+				nav a {
+					margin-top: 20px;
+				}
+			}
+			.globe {
+				font-size: 2rem;
+			}
+			main {
+				position: relative;
+				flex: 1;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0 20px;
+			}
+			main h1 {
+				font-size: 1.6rem;
+				line-height: 2rem;
+				max-width: 500px;
+			}
+			@media screen and (max-width: 600px) {
+				main {
+					align-items: flex-end;
+				}
+			}
+			.wordmark {
+				font-family: 'Soehne Schmal', Impact;
+				font-weight: bold;
+				font-size: 3.6rem;
+				text-transform: uppercase;
+				height: 80px;
+				line-height: 80px;
+				background: black;
+				color: white;
+				padding: 0 20px;
+			}
+			footer {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px;
+			}
+			.next {
+				display: flex;
+				text-align: right;
+				align-items: center;
+			}
+			@media screen and (max-width: 600px) {
+				footer {
+					display: block;
+				}
+				.social {
+					text-align: right;
+				}
+				.next {
+					justify-content: flex-end;
+					flex-direction: row-reverse;
+					text-align: left;
+				}
+			}
+		</style>
+	</head>
+	<body class="checkered">
+		<header>
+			<div class="wordmark">Wuruwuru</div>
+			<nav>
+				<div class="globe">&#127757;</div>
+				<div>
+					<a href="https://www.notion.so/wuruwuru/About-41875d57f15149e6bdbd8eb86c592f67" target="_blank">About</a>
+					<a href="https://medium.com/wuruwuru" target="_blank">Journal</a>
+					<a href="https://www.notion.so/wuruwuru/Public-303d959d7d6e4ad2b7762fce9a64a402" target="_blank">Public</a>
+				</div>
+			</nav>
+		</header>
+		<main id="stage">
+			<h2>
+				Wuruwuru is a publishing experiment.
+			</h2>
+		</main>
+		<footer>
+			<div class="social">
+				<a href="https://twitter.com/wuruwurumag" target="_blank">@wuruwurumag</a>
+			</div>
+			<div class="next">
+				<p>Up Next <br> <b>A Retrospective of Album Cover Art</b></p>
+				<img src="assets/images/logo.png" width="60px" height="60px" alt="Logo">
+			</div>
+		</footer>
+		<script>
+			// Inspired by https://codepen.io/falldowngoboone/pen/PwzPYv
+			var stage = document.getElementById('stage');
+			var dots = [];
+			var mouse = {
+				x: 0,
+				y: 0,
+			};
+			var Dot = function(x, y) {
+				this.x = 0;
+				this.y = 0;
+				const node = document.createElement('div');
+				node.style.width = '10px';
+				node.style.height = '10px';
+				node.style.background = 'black';
+				node.style.position = 'absolute';
+				this.node = node;
+				stage.appendChild(node);
+			};
+			Dot.prototype.draw = function() {
+				var x = Math.round(this.x / 10) * 10;
+				var y = Math.round(this.y / 10) * 10;
+				this.node.style.left = x + 'px';
+				this.node.style.top = y + 'px';
+			};
+			for (var i = 0; i < 12; i++) {
+				dots.push(new Dot());
+			}
+			function render() {
+				var x = mouse.x;
+				var y = mouse.y;
+				dots.forEach(function(dot, index, dots) {
+					dot.x = x;
+					dot.y = y;
+					dot.draw();
+					var nextDot = dots[index + 1] || dots[0];
+					x += (nextDot.x - dot.x) * .6;
+					y += (nextDot.y - dot.y) * .6;
+				});
+			}
+			var hotspots = ['MAIN', 'HEADER', 'FOOTER'];
+			function moveDots(event) {
+				if (hotspots.includes(event.target.tagName)) {
+					mouse.x = event.pageX;
+					mouse.y = event.pageY;
+				}
+			}
+			window.addEventListener('mousemove', moveDots);
+			window.addEventListener('touchmove', moveDots);
+			function animate() {
+				render();
+				requestAnimationFrame(animate);
+			}
+			animate();
+		</script>
+	</body>
+</html>
