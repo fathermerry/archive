@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>An African Conversation</title>
+
+		<meta name="title" content="An African Conversation">
+    <meta name="description" content="An African Conversation">
+    <link rel="icon" type="image/png" href="images/icon.png">
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://africanconversation.com/">
+		<meta property="og:title" content="An African Conversation">
+    <meta property="og:description" content="An African Conversation (AAC) is a series of intimate discussions between prominent African actors in technology, business, engineering, science, and art.">
+    <meta property="og:image" content="https://africanconversation.com/images/opengraph.png">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://africanconversation.com/">
+		<meta property="twitter:title" content="An African Conversation">
+    <meta property="twitter:description" content="An African Conversation (AAC) is a series of intimate discussions between prominent African actors in technology, business, engineering, science, and art.">
+    <meta property="twitter:image" content="https://africanconversation.com/images/opengraph.png">
+    
+    <style>
+      @font-face {
+        font-family: 'Söhne';
+        font-weight: regular;
+        src: url('fonts/Söhne-Buch.otf');
+      }
+      @font-face {
+        font-family: 'Söhne';
+        font-weight: bold;
+        src: url('fonts/Söhne-Kräftig.otf');
+      }
+      html {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-family: 'Söhne', system-ui, 'sans-serif';
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #6CE89F;
+        border-top: inset 4px #333;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+        color: #333333;
+        box-sizing: border-box;
+      }
+      header, main, footer {
+        padding: 30px;
+      }
+      header img {
+        width: 100%;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        margin: 0;
+      }
+      .read-only {
+        display: none;
+      }
+      .mobile-only {
+        display: none;
+      }
+      @media screen and (max-width: 600px) {
+        .desktop-only {
+          display: none;
+        }
+        .mobile-only {
+          display: block;
+        }
+      }
+      @keyframes blink {
+        50% {
+          opacity: 1;
+        }
+      }
+      .indicator {
+        background: rgba(255, 255, 255, 0.6);
+        padding: 15px 20px;
+        display: flex;
+        border-radius: 30px;
+      }
+      .indicator span {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+        border-radius: 50px;
+        display: inline-block;
+        background: #333333;
+        opacity: 0.4;
+        animation: 1s blink infinite 0.3333s;
+      }
+      .indicator span:nth-child(2) {
+        animation: 1s blink infinite 0.6666s;
+      }
+      .indicator span:nth-child(3) {
+        animation: 1s blink infinite 1s;
+      }
+      .colophon {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .colophon a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .colophon a:hover {
+        text-decoration: underline;
+      }
+    </style>
+	</head>
+	<body>
+    <header>
+      <h1 class="read-only">An African Conversation</h1>
+      <img class="desktop-only" src="images/wordmark_desktop.svg" alt="An African Conversation">
+      <img class="mobile-only" src="images/wordmark_mobile.svg" alt="An African Conversation">
+    </header>
+    <main>
+      <div class="indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </main>
+    <footer>
+      <div class="colophon">
+        <p>An African Conversation (AAC) is a series of intimate discussions between prominent African actors in technology, business, engineering, science, and art.</p>
+        <p><a href="mailto:hello@africanconversation.com">Send us an email</a></p>
+      </div>
+    </footer>
+	</body>
+</html>
