@@ -1,0 +1,54 @@
+.c-hero {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	@include screen(small) {
+		display: block;
+	}
+	&__left {
+		> * {
+			max-width: 75%;
+		}
+		.c-button {
+			display: none;
+			margin-top: 20px;
+			max-width: 200px;
+			@include screen(small) {
+				display: inherit;
+			}
+		}
+	}
+	&__left, &__right {
+		flex: 1;
+	}
+	&__right img {
+		box-shadow: 1px 2px 0px rgba($color-deep-red, 0.05);
+		border-radius: 50%;
+		overflow: hidden;
+		max-width: 540px;
+		transform: rotate(-7deg);
+		@include screen(small) {
+			display: none;
+		}
+	}
+}
+
+.u-background--hero svg path {
+	animation: backgroundWave 12s ease-in 25 forwards;
+}
+
+@keyframes backgroundWave {
+	0%,
+	100% {
+     d: path('M620 145c-235 73-511 63-620 49v317h1440V36c-306-93-527 18-820 109z');
+	}
+
+	25% {
+		d: path('M620 86c-235 84-511 15-620-2v426h1440V75C1134-33 913-20 620 86z')
+	}
+
+  50% {
+		d: path('M620 166C225 166 109 15 0 0v510h1440V210c-288-210-451-44-820-44z');
+  }
+}
