@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Primary Meta Tags -->
+    <title>JAND</title>
+    <meta name="title" content="JAND">
+    <meta name="description" content="JAND is a slice-of-life webcomic about Nigerian millennial university students living in the UK.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jandcomic.com/">
+    <meta property="og:title" content="JAND">
+    <meta property="og:description" content="JAND is a slice-of-life webcomic about Nigerian millennial university students living in the UK.">
+    <meta property="og:image" content="https://jandcomic.com/images/opengraph.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jandcomic.com/">
+    <meta property="twitter:title" content="JAND">
+    <meta property="twitter:description" content="JAND is a slice-of-life webcomic about Nigerian millennial university students living in the UK.">
+    <meta property="twitter:image" content="https://jandcomic.com/images/opengraph.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      const characters = ['sade', 'mohammed', 'mofe', 'ify', 'hadiza', 'sean', 'bayo', 'bibi'];
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      function randomCharacter() {
+        return '/images/favicons/' + characters[randomIndex] + '.png';
+      }
+      const link = document.createElement('link');
+      link.rel = 'icon';
+      link.type = 'image/png';
+      link.href = randomCharacter();
+      document.head.appendChild(link);
+    </script>
+
+    <style>
+      :root {
+        --dark: #231F1C;
+        --offwhite: #FFF8F2;
+        --brown: #5E3202;
+        --lightbrown: #A3968C;
+        --font: 'Inter', system-ui;
+        --input: 16px;
+        --p: 18px;
+        --h3: 21px;
+        --h2: 28px;
+        --h1: 32px;
+        --small: 14px;
+      }
+      html, body {
+        padding: 0;
+        margin: 0;
+        background: var(--offwhite);
+        color: var(--dark);
+        font-family: var(--font);
+        font-size: var(--p);
+        position: relative;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: var(--brown);
+      }
+      img {
+        margin: 0;
+        max-width: 100%;
+      }
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover, 
+      input:-webkit-autofill:focus, 
+      input:-webkit-autofill:active  {
+        -webkit-box-shadow: 0 0 0 30px var(--offwhite) inset !important;
+      }
+      header {
+        border-bottom: solid 5px var(--dark);
+        position: relative;
+        top: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      @media all and (max-width: 640px) {
+        nav {
+          position: absolute;
+          padding: 20px;
+        }
+      }
+      .logo {
+        height: 45px;
+      }
+      button, .button {
+        display: inline-block;
+        padding: 12px 18px;
+        background: var(--dark);
+        color: var(--offwhite);
+        border: none;
+        border-radius: 12px;
+        outline: none;
+        -webkit-appearance: none;
+        font-family: var(--font);
+        font-size: var(--input);
+        cursor: pointer;
+      }
+      button:hover {
+        background: var(--brown);
+      }
+      .masthead {
+        text-align: center;
+        height: 500px;
+        max-height: 70vh;
+        background: url('/images/mascot.jpg');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        padding: 100px 0 0;
+      }
+      @media all and (max-width: 960px) {
+        .masthead {
+          height: 400px;
+          background-size: auto 90%;
+          padding: 50px 20px;
+          background-image: url('/images/mascot_mobile.png');
+          background-size: 500px auto;
+        }
+        .masthead-2 {
+          background-image: url('/images/mascot_mobile_2.png');
+        }
+      }
+      h1 {
+        font-size: var(--h1);
+        line-height: 1.2;
+      }
+      @media all and (max-width: 960px) {
+        h1 {
+          font-size: var(--h2);
+        }
+      }
+      h2 {
+        font-size: var(--h2);
+        line-height: 1.2;
+      }
+      h3 {
+        font-size: var(--h3);
+        line-height: 1.5;
+      }
+      p {
+        font-size: var(--p);
+        line-height: 1.5;
+      }
+      small {
+        font-size: var(--small);
+        line-height: 1.5;
+      }
+      main {
+        margin: 10vh auto;
+        max-width: 650px;
+        padding: 0 30px;
+      }
+      @media all and (max-width: 640px) {
+        main {
+          margin: 50px auto;
+        }
+      }
+      .intro {
+        text-align: center;
+        flex: 1;
+      }
+      @media all and (min-width: 640px) {
+        .intro {
+          padding-right: 20px;
+        }
+      }
+      .subscribe {
+        margin: 50px 0 0;
+        text-align: center;
+      }
+      .form {
+        border-radius: 12px;
+        border: solid 3px var(--dark);
+        padding: 10px 10px 10px 20px;
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .form .input {
+        background: none;
+        -webkit-appearance: none;
+        color: var(--dark);
+        font: var(--font);
+        font-size: var(--input);
+        border: none;
+        outline: none;
+        flex: 1;
+        height: 42px;
+        line-height: 42px;
+      }
+      .form .button:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      @media all and (max-width: 640px) {
+        .form {
+          display: block;
+          padding: 10px 20px 20px;
+        }
+        .form .input {
+          display: block;
+          margin: 20px 0;
+          width: 100%;
+        }
+        .form .button {
+          width: 100%;
+          padding: 18px;
+        }
+      }
+      .share {
+        text-align: center;
+        max-width: 400px;
+        margin: 50px auto 0;
+      }
+      .share p {
+        margin-bottom: 20px;
+        font-size: var(--small);
+        font-weight: 600;
+      }
+      .share ul {
+        display: inline-flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+      }
+      .share li {
+        margin-left: 10px;
+      }
+      .share a {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: solid 2px var(--dark);
+        font-size: var(--small);
+        color: var(--dark);
+        font-weight: 500;
+      }
+      .share a:hover {
+        color: var(--brown);
+        border-color: var(--brown);
+      }
+      .share a:hover svg path {
+        fill: var(--brown);
+      }
+      .share a svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+      }
+      @media all and (max-width: 640px) {
+        .share ul {
+          display: block;
+        }
+        .share li {
+          margin: 0 0 10px;
+          display: block;
+        }
+        .share a {
+          display: inline-flex;
+        }
+      }
+      footer {
+        padding: 30px;
+        font-weight: 500;
+        opacity: 0.7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      footer > div {
+        margin: 0 auto;
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+      footer > div:nth-child(1) {
+        justify-content: flex-start;
+      }
+      footer > div:nth-child(2) {
+        justify-content: center;
+        text-align: center;
+      }
+      footer > div:nth-child(3) {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      @media all and (max-width: 1000px) {
+        footer {
+          display: block;
+        }
+        footer > div:nth-child(1), footer > div:nth-child(2), footer > div:nth-child(3) {
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin: 20px 0;
+        }
+      }
+      footer a {
+        color: var(--dark);
+      }
+      footer a:hover {
+        color: var(--brown);
+      }
+      footer p {
+        max-width: 280px;
+        line-height: 1.1;
+        margin: 0;
+      }
+      .footer-username {
+        margin-bottom: 5px;
+      }
+      .footer-links {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+      .footer-icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 12px;
+        transition: 0.3s;
+      }
+      @media all and (max-width: 1000px) {
+        .footer-icon {
+          width: 18px;
+          height: 18px;
+          margin: 10px 5px;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.05);
+          border: solid 18px rgba(0, 0, 0, 0.05);
+          box-sizing: content-box;
+        }
+      }
+      .footer-icon:hover {
+        transform: scale(1.05);
+      }
+      .footer-icon:hover svg path {
+        fill: var(--brown);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <img class="logo" src="images/logo.png" alt="JAND logo" />
+          <button onclick="scrollToSubscribe()">Get notified</button>
+        </nav>
+        <div class="masthead" id="masthead"></div>
+    </header>
+    <main>
+      <div class="intro">
+        <h1>JAND is a slice-of-life webcomic about Nigerian millennial university students living in the UK.</h1>
+        <p>First published in 2014, JAND is an exciting and relatable story of everyday life in university. Season 1 starts in September, with new comic strips published every weekday until June 2021.</p>
+      </div>
+      <div id="suscribe" class="subscribe">
+        <p><b>Get notified when Season 1 starts</b></p>
+        <div id="mc_embed_signup">
+          <form class="form" action="https://jandcomic.us10.list-manage.com/subscribe/post?u=1721978482d033f9ccdfbcec5&amp;id=33e39a4b41" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+            <input class="input" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" oninput="validateButton(this)" placeholder="your@email.here" required>
+            <input class="button" type="submit" value="Notify me" name="subscribe" id="mc-embedded-subscribe" disabled>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_1721978482d033f9ccdfbcec5_33e39a4b41" tabindex="-1" value="">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="share">
+        <p>Share JAND with your friends</p>
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjandcomic.com&text=JAND%20is%20a%20slice-of-life%20webcomic%20about%20Nigerian%20millennial%20university%20students%20living%20in%20the%20UK." target="_blank">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Share JAND on Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>   
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjandcomic.com" target="_blank">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Share JAND on Facebook</title><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <div class="footer-logo">
+          <img class="logo" src="images/logo.png" alt="JAND logo" />
+        </div>
+      </div>
+      <div>
+        <p>
+          <small>JAND is written and illustrated by Modé with help from <a href="https://instagram.com/segun_samson" target="_blank">Segun Samson</a></small>
+        </p>
+      </div>
+      <div>
+        <div class="footer-username">
+          <small>@jandcomic</small>
+        </div>
+        <div class="footer-links">
+          <a class="footer-icon" href="https://twitter.com/jandcomic">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>@jandcomic on Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>   
+          </a>
+          <a class="footer-icon" href="https://instagram.com/jandcomic">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>@jandcomic on Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+          </a>
+          <a class="footer-icon" href="https://facebook.com/jandcomic">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>@jandcomic on Facebook</title><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const randomCheck = Math.random() > 0.5;
+      if (randomCheck) {
+        const masthead = document.querySelector('#masthead');
+        masthead.classList.add('masthead-2');
+      }
+    </script>
+    <script>
+      const subscribeDiv = document.querySelector('#suscribe');
+      const subscribeForm = document.querySelector('#mc-embedded-subscribe-form');
+      const emailInput = document.querySelector('#mce-EMAIL');
+      const subscribeButton = document.querySelector('#mc-embedded-subscribe');
+
+      function scrollToSubscribe() {
+        subscribeDiv.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          emailInput.focus();
+        }, 1000);
+      }
+
+      function isValidEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      function validateButton(input) {
+        if (isValidEmail(input.value)) {
+          subscribeButton.removeAttribute('disabled');
+        } else {
+          subscribeButton.setAttribute('disabled', true);
+        }
+      }
+
+      function disableForm() {
+        subscribeButton.value = 'Please wait';
+        subscribeButton.setAttribute('disabled', true);
+      }
+
+      subscribeForm.addEventListener('submit', () => disableForm());
+    </script>
+  </body>
+</html>
