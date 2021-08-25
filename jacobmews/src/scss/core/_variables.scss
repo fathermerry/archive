@@ -1,0 +1,73 @@
+
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $button-height-sm.
+
+//
+// Font
+//
+
+// Font family
+
+$font-type-serif: "Sorts Mill Goudy", "Times New Roman", Times, serif;
+$font-type-regular: "Sarala", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// Font weight
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+// Font Size
+$heading-font-size: 3.2rem;
+
+$button-font-size: 1.4rem;
+
+//
+// Button
+//
+$button-height: 60px;
+$button-height-sm: 40px;
+
+//
+// Box shadow
+//
+
+$box-shadow-white-bg-default: 0 1px 6px rgba(0,0,0,0.02);
+
+//
+// Color System
+//
+
+$brand-color-deep-red: #6B4445;
+$brand-color-yellow: #FBF8E9;
+$text-color-default: #404040;
+
+// Color s
+$color-yellow: $brand-color-yellow;
+$color-deep-red: $brand-color-deep-red;
+$color-brown-bg: rgba($brand-color-deep-red, 0.02);
+$color-gray-line: #ECECEC;
+$color-gray-text: #A5A8AB;
+
+//
+// Padding
+//
+
+$padding-lg: 120px;
+$padding-md: 60px;
+$padding-sm: 30px;
+$padding-xs: 15px;
+
+
+// Border
+$border-color-default: rgba($brand-color-deep-red, 0.2);
+
+
+
+//
+// Border radius
+//
+
+$border-radius-default: 5px;
+$border-radius-sm: 3px;

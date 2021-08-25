@@ -1,0 +1,41 @@
+.l-section {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	background: $color-yellow;
+	.u-background {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		> svg {
+			display: flex;
+			fill-opacity: 0.02;
+		}
+	}
+	&--is-brown {
+		background: $color-brown-bg;
+	}
+	&--is-padded {
+		padding: $padding-lg 0;
+		@media screen and (max-width: 800px) {
+			padding: $padding-md 0;
+		}
+	}
+	&--hero {
+		padding: $padding-lg 0;
+		@media screen and (max-width: 800px) {
+			padding: $padding-md 0 $padding-sm;
+			min-height: 550px;
+			display: flex;
+			align-items: center;
+		}
+	}
+	&--contact {
+		padding: $padding-lg 0 $padding-md;
+		@media screen and (max-width: 800px) {
+			padding: $padding-md 0;
+		}
+	}
+}

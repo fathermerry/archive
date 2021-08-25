@@ -1,0 +1,7 @@
+// This config ensures that vscode uses the default settings in the .editorconfig file
+{
+	"editor.detectIndentation": false,
+	"editor.tabSize": 2,
+	"eslint.autoFixOnSave": true
+	// "editor.formatOnSave": true
+}

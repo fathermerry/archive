@@ -1,0 +1,94 @@
+html {
+	font-size: 62.5%;
+	background: $color-yellow;
+	@include screen(small) {
+		font-size: 58%;
+	}
+}
+
+body {
+	color: $text-color-default;
+	font-family: $font-type-regular;
+	font-size: 1.6rem;
+}
+
+h1,
+.u-text-h1 {
+	font-family: $font-type-serif;
+	color: $color-deep-red;
+	font-style: normal;
+	font-weight: $font-weight-regular;
+	font-size: 4.2rem;
+	line-height: 1.15;
+	margin: 0 0 $padding-xs;
+	@media screen and (max-width: 640px) {
+		font-size: 3rem;
+	}
+}
+
+h2,
+.u-text-h2 {
+	font-family: $font-type-serif;
+	font-style: normal;
+	font-weight: $font-weight-regular;
+	font-size: 2.8rem;
+	margin: 0 0 $padding-xs;
+	@media screen and (max-width: 640px) {
+		font-size: 2.2rem;
+	}
+}
+
+h3,
+.u-text-h3 {
+	font-family: $font-type-serif;
+	font-style: normal;
+	color: $color-deep-red;
+	font-weight: $font-weight-regular;
+	font-size: 2.4rem;
+	margin: 0 0 $padding-xs;
+	@media screen and (max-width: 640px) {
+		font-size: 1.8rem;
+	}
+}
+
+%u-text-h4 {
+	font-family: $font-type-regular;
+	color: $color-deep-red;
+	font-style: normal;
+	font-weight: $font-weight-bold;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 0.7px;
+}
+
+h4 {
+	@extend %u-text-h4;
+	margin: 0 0 $padding-xs;
+	@media screen and (max-width: 640px) {
+		font-size: 1.2rem;
+	}
+}
+
+
+a:not(.c-button),
+.u-text-link:not(.c-button) {
+	position: relative;
+	text-decoration: none;
+	color: $text-color-default;
+	&::after {
+		content: '';
+		position: absolute;
+		left: -2px;
+		right: -2px;
+		bottom: -3px;
+		transform: scaleX(0);
+		height: 2px;
+		background: $text-color-default;
+		border-radius: 20px;
+		transition: transform .25s linear;
+		transform-origin: center;
+	}
+	&:hover::after {
+		transform: scaleX(1);
+	}
+}

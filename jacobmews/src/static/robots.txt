@@ -1,0 +1,3 @@
+# robots.txt for jacob-mews.netlify.com
+
+User-agent: *

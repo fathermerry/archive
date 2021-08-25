@@ -1,0 +1,29 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"parser": "babel-eslint"
+	},
+	"extends": ["airbnb-base"],
+	"rules": {
+		// Default Paystack Rules
+		"no-use-before-define": ["error", { "functions": false, "classes": false }],
+		"no-param-reassign": ["warn"],
+		"max-len": [
+			"error",
+			{
+				"code": 150,
+				"ignoreTemplateLiterals": true,
+				"ignoreStrings": true
+			}
+		],
+		"no-shadow": ["error"],
+		"arrow-parens": ["error", "as-needed"],
+		"wrap-iife": ["error", "inside"],
+		"indent": ["error", "tab"],
+		"no-tabs": ["error", { "allowIndentationTabs": true }],
+		"comma-dangle": ["error", "always-multiline"]
+	}
+}

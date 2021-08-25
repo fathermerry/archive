@@ -1,0 +1,25 @@
+{
+  "name": "jacob-mews",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel -d public src/index.html",
+    "build": "parcel build -d public src/index.html --no-source-maps"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.9",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-robot": "^1.0.0",
+    "sass": "^1.23.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.5",
+    "now": "^16.3.1",
+    "postcss-modules": "^1.4.1"
+  }
+}
